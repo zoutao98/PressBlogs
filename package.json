@@ -1,0 +1,16 @@
+{
+  "name": "PressBlogs",
+  "version": "1.0.0",
+  "description": "blogs",
+  "main": "index.js",
+  "repository": "git@github.com:zoutao98/PressBlogs.git",
+  "author": "zoutao98 <ezoutao@foxmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.51"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  }
+}

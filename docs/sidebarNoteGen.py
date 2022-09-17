@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 
@@ -5,7 +6,7 @@ def walkFloder(dirName):
     res = os.walk(dirName)
 
 
-sideBar = []
+sideBars = []
 reocde = {}
 
 if __name__ == '__main__':
@@ -19,11 +20,19 @@ if __name__ == '__main__':
             for file in filenames:
                 if file.endswith('.md'):
                     prefix = dirpath.split(basePath)[1]
-                    print("pre: "+os.path.join("/"+basePath, prefix[1:], file))
+                    prefix = "/".join(prefix.split("\\"))
+                    prefix = "/".join(["/"+basePath, prefix[1:], file])
+                    try:
+                        reocde[basedir]
+                        for sidebar in sideBars:
+                            if sidebar['text'] == basedir:
+                                sidebar['children'].append(prefix)
+                    except:
+                        reocde[basedir] = basedir
+                        sideBars.append({'collapsible': True, 'text': basedir, 'children': [prefix,]})
 
-
-                    sideBar.append({'collapsible': True,})
                     print(f"basedir:{basedir}, {file}")
 
-    print(sideBar)
+    # print(sideBars)
+    print("\\\"".join(json.dumps(sideBars).split("\"")))
 

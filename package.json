@@ -12,5 +12,8 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
   }
 }

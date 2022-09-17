@@ -1,0 +1,29 @@
+import{_ as a,o as n,c as e,e as s}from"./app.938b9288.js";const i={},r=s(`<h1 id="debian-11" tabindex="-1"><a class="header-anchor" href="#debian-11" aria-hidden="true">#</a> Debian 11</h1><h2 id="\u7CFB\u7EDF\u7528\u6237\u7BA1\u7406" tabindex="-1"><a class="header-anchor" href="#\u7CFB\u7EDF\u7528\u6237\u7BA1\u7406" aria-hidden="true">#</a> \u7CFB\u7EDF\u7528\u6237\u7BA1\u7406</h2><h3 id="\u7528\u6237" tabindex="-1"><a class="header-anchor" href="#\u7528\u6237" aria-hidden="true">#</a> \u7528\u6237</h3><p>useradd</p><h3 id="\u7EC4\u7BA1\u7406" tabindex="-1"><a class="header-anchor" href="#\u7EC4\u7BA1\u7406" aria-hidden="true">#</a> \u7EC4\u7BA1\u7406</h3><h5 id="usermod" tabindex="-1"><a class="header-anchor" href="#usermod" aria-hidden="true">#</a> usermod</h5><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>\u7528\u6CD5\uFF1Ausermod <span class="token punctuation">[</span>\u9009\u9879<span class="token punctuation">]</span> \u767B\u5F55\u540D
+
+\u9009\u9879\uFF1A
+  -b, <span class="token parameter variable">--badnames</span>                allow bad names
+  -c, <span class="token parameter variable">--comment</span> COMMENT         GECOS \u5B57\u6BB5\u7684\u65B0\u503C
+  -d, <span class="token parameter variable">--home</span> HOME_DIR           \u7528\u6237\u7684\u65B0\u4E3B\u76EE\u5F55
+  -e, <span class="token parameter variable">--expiredate</span> EXPIRE_DATE  \u8BBE\u5B9A\u5E10\u6237\u8FC7\u671F\u7684\u65E5\u671F\u4E3A EXPIRE_DATE
+  -f, <span class="token parameter variable">--inactive</span> INACTIVE       \u8FC7\u671F INACTIVE \u5929\u6570\u540E\uFF0C\u8BBE\u5B9A\u5BC6\u7801\u4E3A\u5931\u6548\u72B6\u6001
+  -g, <span class="token parameter variable">--gid</span> GROUP               \u5F3A\u5236\u4F7F\u7528 GROUP \u4E3A\u65B0\u4E3B\u7EC4
+  -G, <span class="token parameter variable">--groups</span> <span class="token environment constant">GROUPS</span>           \u65B0\u7684\u9644\u52A0\u7EC4\u5217\u8868 <span class="token environment constant">GROUPS</span>
+  -a, <span class="token parameter variable">--append</span> GROUP            \u5C06\u7528\u6237\u8FFD\u52A0\u81F3\u4E0A\u8FB9 <span class="token parameter variable">-G</span> \u4E2D\u63D0\u5230\u7684\u9644\u52A0\u7EC4\u4E2D\uFF0C
+                                \u5E76\u4E0D\u4ECE\u5176\u5B83\u7EC4\u4E2D\u5220\u9664\u6B64\u7528\u6237
+  -h, <span class="token parameter variable">--help</span>                    \u663E\u793A\u6B64\u5E2E\u52A9\u4FE1\u606F\u5E76\u9000\u51FA
+  -l, <span class="token parameter variable">--login</span> NEW_LOGIN         \u65B0\u7684\u767B\u5F55\u540D\u79F0
+  -L, <span class="token parameter variable">--lock</span>                    \u9501\u5B9A\u7528\u6237\u5E10\u53F7
+  -m, --move-home               \u5C06\u5BB6\u76EE\u5F55\u5185\u5BB9\u79FB\u81F3\u65B0\u4F4D\u7F6E <span class="token punctuation">(</span>\u4EC5\u4E8E <span class="token parameter variable">-d</span> \u4E00\u8D77\u4F7F\u7528<span class="token punctuation">)</span>
+  -o, --non-unique              \u5141\u8BB8\u4F7F\u7528\u91CD\u590D\u7684<span class="token punctuation">(</span>\u975E\u552F\u4E00\u7684<span class="token punctuation">)</span> <span class="token environment constant">UID</span>
+  -p, <span class="token parameter variable">--password</span> PASSWORD       \u5C06\u52A0\u5BC6\u8FC7\u7684\u5BC6\u7801 <span class="token punctuation">(</span>PASSWORD<span class="token punctuation">)</span> \u8BBE\u4E3A\u65B0\u5BC6\u7801
+  -R, <span class="token parameter variable">--root</span> CHROOT_DIR         <span class="token function">chroot</span> \u5230\u7684\u76EE\u5F55
+  -P, <span class="token parameter variable">--prefix</span> PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, <span class="token parameter variable">--shell</span> <span class="token environment constant">SHELL</span>             \u8BE5\u7528\u6237\u5E10\u53F7\u7684\u65B0\u767B\u5F55 shell
+  -u, <span class="token parameter variable">--uid</span> <span class="token environment constant">UID</span>                 \u7528\u6237\u5E10\u53F7\u7684\u65B0 <span class="token environment constant">UID</span>
+  -U, <span class="token parameter variable">--unlock</span>                  \u89E3\u9501\u7528\u6237\u5E10\u53F7
+  -v, --add-subuids FIRST-LAST  \u6DFB\u52A0\u5B50 <span class="token environment constant">UID</span> \u8303\u56F4
+  -V, --del-subuids FIRST-LAST  \u79FB\u9664\u5B50 <span class="token environment constant">UID</span> \u8303\u56F4
+  -w, --add-subgids FIRST-LAST  \u6DFB\u52A0\u5B50 GID \u8303\u56F4
+  -W, --del-subgids FIRST-LAST  \u79FB\u9664\u5B50 GID \u8303\u56F4
+  -Z, --selinux-user SEUSER     \u7528\u6237\u7684\u65B0\u7684 SELinux \u7528\u6237\u6620\u5C04
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,7),l=[r];function t(d,c){return n(),e("div",null,l)}const o=a(i,[["render",t],["__file","Debian 11.html.vue"]]);export{o as default};

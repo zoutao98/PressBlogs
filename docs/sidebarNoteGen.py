@@ -9,6 +9,12 @@ def walkFloder(dirName):
 sideBars = []
 reocde = {}
 
+text = {
+    'accesscontrol':'访问控制',
+    'embeddedc':'嵌入式',
+    'file-io':'文件IO'
+    }
+
 if __name__ == '__main__':
     basePath = "myblog"
     execPath = os.path.dirname(os.path.realpath(__file__))
@@ -29,10 +35,20 @@ if __name__ == '__main__':
                                 sidebar['children'].append(prefix)
                     except:
                         reocde[basedir] = basedir
-                        sideBars.append({'collapsible': True, 'text': basedir, 'children': [prefix,]})
+                        try:
+                            text[basedir]
+                            sideBars.append({'collapsible': True, 'text': text[basedir], 'children': [prefix,]})
+                        except:
+                            sideBars.append({'collapsible': True, 'text': basedir, 'children': [prefix,]})
 
-                    print(f"basedir:{basedir}, {file}")
+                    print(f"{basedir}, {file}")
 
     # print(sideBars)
-    print("\\\"".join(json.dumps(sideBars).split("\"")))
+    # print("\\\"".join(json.dumps(sideBars).split("\"")))
+
+    jsfile = os.path.join(execPath, ".vuepress", "config", "config.js")
+    # print(jsfile)
+
+    with open(jsfile, 'w') as f:
+        f.write("export const sidebarNote = {\n    '/': JSON.parse(\"%s\")\n}" % "\\\"".join(json.dumps(sideBars).split("\"")))
 

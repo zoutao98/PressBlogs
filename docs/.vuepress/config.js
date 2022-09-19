@@ -10,6 +10,8 @@ export default defineUserConfig({
     title: 'zoutao98\'s blogs',
     description: 'zoutao98 的博客',
     theme: defaultTheme({
-        sidebar: sidebarNote
+        lastUpdatedText: '上次更新',
+        sidebar: sidebarNote,
+        contributors: false,
     })
 })

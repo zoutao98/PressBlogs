@@ -1,0 +1,1 @@
+const l=JSON.parse('{"key":"v-231b1bb9","path":"/myblog/lvgl/lvgl-one.html","title":"lvgl \u4ECB\u7ECD","lang":"zh-CN","frontmatter":{"date":"2022/08/30","author":"zoutao","title":"lvgl \u4ECB\u7ECD","category":"lvgl","tags":["lvgl"]},"excerpt":"","headers":[],"git":{"updatedTime":null},"filePathRelative":"myblog/lvgl/lvgl-one.md"}');export{l as data};

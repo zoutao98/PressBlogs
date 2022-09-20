@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-1d4e26f7","path":"/myblog/python/except%20hook.html","title":"python \u5168\u5C40\u5F02\u5E38\u94A9\u5B50\u51FD\u6570","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1663665961000},"filePathRelative":"myblog/python/except hook.md"}');export{t as data};

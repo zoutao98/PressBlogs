@@ -13,7 +13,7 @@ text = {
     'python':'Python',
     'docker':'Docker',
     'caddy':'Caddy',
-    'vscode':'VSCode开发'
+    'vscode':'VSCode使用'
 }
 
 baseDir = "myblog"

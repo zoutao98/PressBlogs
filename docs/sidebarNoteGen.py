@@ -13,8 +13,14 @@ text = {
     'python':'Python',
     'docker':'Docker',
     'caddy':'Caddy',
+    'linux':'Linux',
     'vscode':'VSCode使用'
 }
+
+hide = [
+    'file-io',
+    'redis'
+]
 
 baseDir = "myblog"
 pythonExecPath = os.path.dirname(os.path.realpath(__file__))
@@ -28,22 +34,17 @@ def splicingSideBars(p: str, mp):
         pList = p.split(baseDir)[1]
         pList = pList.split('\\')[1:]
         pLen = len(pList)
+        hideStatus = False
         for i in range(pLen):
+            if pList[i] in hide:
+                hideStatus = True
+                break
             try:
                 pList[i] = text[pList[i]]
             except:
                 pass
-        # if pLen == 1:
-        #     exist = False
-        #     for sidebar in sideBars:
-        #         if sidebar['text'] == pList[0]:
-        #             exist = True
-        #             sidebar['children'].append(mp)
-        #     if not sideBars or not exist:
-        #         sideBars.append({'collapsible': True, 'text': pList[0], 'children': [mp,]})
-
-        #     return
-
+        if hideStatus:
+            return
         currentSidebar = sideBars
         for i in range(pLen):
             exist = False
@@ -86,8 +87,6 @@ def walkPathRecursion(path):
                 # print(mdPath)
                 splicingSideBars(parentPath, mdPath)
 
-
-# print(walkPath)
 walkPathRecursion(walkPath)
 
 """
@@ -121,7 +120,6 @@ for dirpath, dirnames, filenames in os.walk(walkPath):
 """ 
 
 jsfile = os.path.join(pythonExecPath, ".vuepress", "config", "config.js")
-# print(jsfile)
 
 with open(jsfile, 'w') as f:
     f.write("export const sidebarNote = {\n    '/': JSON.parse(\"%s\")\n}" % "\\\"".join(json.dumps(sideBars).split("\"")))

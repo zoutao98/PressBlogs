@@ -14,11 +14,13 @@ text = {
     'docker':'Docker',
     'caddy':'Caddy',
     'linux':'Linux',
+    'zzzfutures':'期货',
     'vscode':'VSCode使用'
 }
 
 hide = [
     'file-io',
+    'zzzfutures',
     'redis'
 ]
 

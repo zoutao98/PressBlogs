@@ -10,6 +10,8 @@ text = {
     'embeddedc':'嵌入式',
     'file-io':'文件IO',
     'java':'Java',
+    '100spring-data-jpa':'Spring Data JPA',
+    '001javabase':'Java基础',
     'python':'Python',
     'docker':'Docker',
     'caddy':'Caddy',

@@ -23,7 +23,8 @@ text = {
 hide = [
     'file-io',
     'zzzfutures',
-    'redis'
+    'redis',
+    'zzthiden'
 ]
 
 baseDir = "myblog"

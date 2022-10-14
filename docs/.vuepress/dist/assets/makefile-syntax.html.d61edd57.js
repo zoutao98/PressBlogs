@@ -1,0 +1,5 @@
+import{_ as e,o as a,c as n,a as s}from"./app.8ca4f74c.js";const i={},l=s(`<h1 id="makefile-\u8BED\u6CD5" tabindex="-1"><a class="header-anchor" href="#makefile-\u8BED\u6CD5" aria-hidden="true">#</a> makefile \u8BED\u6CD5</h1><div class="language-makefile ext-makefile line-numbers-mode"><pre class="language-makefile"><code><span class="token target symbol">targets</span><span class="token punctuation">:</span> prerequisites
+	command
+	command
+	command
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2"><li>\u547D\u4EE4\u662F\u4E00\u7CFB\u5217\u901A\u5E38\u7528\u4E8E\u751F\u6210\u76EE\u6807\u7684\u6B65\u9AA4\u3002\u8FD9\u4E9B\u5B57\u7B26\u9700\u8981\u4EE5\u5236\u8868\u7B26\u5F00\u59CB\uFF0C\u800C\u4E0D\u662F\u7A7A\u683C\u3002</li></ol>`,3),t=[l];function c(d,r){return a(),n("div",null,t)}const m=e(i,[["render",c],["__file","makefile-syntax.html.vue"]]);export{m as default};
